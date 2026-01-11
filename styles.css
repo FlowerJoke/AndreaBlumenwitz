@@ -18,6 +18,19 @@ body {
     padding: 0 20px;
 }
 
+/* Screen reader only */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
 /* Header and Navigation */
 .header {
     background-color: #fff;
@@ -246,7 +259,8 @@ body {
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-    outline: none;
+    outline: 2px solid #e91e63;
+    outline-offset: 2px;
     border-color: #e91e63;
 }
 
