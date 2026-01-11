@@ -1,0 +1,12 @@
+<svg width="600" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9c27b0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e91e63;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#grad2)"/>
+  <circle cx="300" cy="250" r="100" fill="white" opacity="0.3"/>
+  <text x="50%" y="60%" text-anchor="middle" fill="white" font-size="36" font-family="Arial, sans-serif" font-weight="bold">Andrea</text>
+  <text x="50%" y="68%" text-anchor="middle" fill="white" font-size="24" font-family="Arial, sans-serif">Deine Trainerin</text>
+</svg>
