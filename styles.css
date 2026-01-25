@@ -225,6 +225,11 @@ img {
   line-height: 1.8;
 }
 
+.kurs-image {
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
 /* Journey Section */
 .journey {
   background-color: #f9f9f9;
