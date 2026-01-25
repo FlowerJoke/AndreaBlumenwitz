@@ -22,6 +22,7 @@ img {
   height: auto;
   display: block;
 }
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -206,7 +207,7 @@ img {
 
 .outdoor-kurs .container {
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  grid-template-columns: 1fr 2.5fr;
   gap: 4rem;
   align-items: center;
 }
@@ -225,8 +226,12 @@ img {
   line-height: 1.8;
 }
 
-.kurs-image {
-  border-radius: 10px;
+/* Outdoor course image sizing */
+.kurs-image img {
+  width: 100%;
+  max-width: 420px; /* 👈 controls size */
+  margin: 0 auto;
+  border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
