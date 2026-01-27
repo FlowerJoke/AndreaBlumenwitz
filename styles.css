@@ -1,8 +1,5 @@
-/* Reset and Base Styles */
 * {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 html {
@@ -27,19 +24,6 @@ img {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-}
-
-/* Screen reader only */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
 }
 
 /* Header and Navigation */
@@ -133,6 +117,10 @@ img {
   font-weight: 500;
 }
 
+.hero-image {
+  margin-top: 5%;
+}
+
 .btn-primary {
   display: inline-block;
   padding: 1rem 2.5rem;
@@ -207,7 +195,7 @@ img {
 
 .outdoor-kurs .container {
   display: grid;
-  grid-template-columns: 1fr 2.5fr;
+  grid-template-columns: 1fr 1.5fr;
   gap: 4rem;
   align-items: center;
 }
@@ -229,7 +217,7 @@ img {
 /* Outdoor course image sizing */
 .kurs-image img {
   width: 100%;
-  max-width: 420px; /* 👈 controls size */
+  max-width: 420px;
   margin: 0 auto;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -432,7 +420,7 @@ form {
   flex-direction: column;
   gap: 1.5rem;
   padding: 2rem;
-  background-color: #f9f9f9; /* light background */
+  background-color: #f9f9f9;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
@@ -454,17 +442,15 @@ form textarea {
 form input:focus,
 form textarea:focus {
   outline: none;
-  border-color: #e91e63; /* violet-ish focus */
+  border-color: #e91e63;
   box-shadow: 0 0 0 3px rgba(233, 30, 99, 0.2);
 }
 
-/* Placeholder styling */
 form input::placeholder,
 form textarea::placeholder {
   color: #999;
 }
 
-/* Button styling */
 form .btn-primary {
   padding: 0.85rem 1.5rem;
   background-color: #e91e63;
@@ -486,6 +472,18 @@ form .btn-primary:hover {
 
 form .btn-primary:active {
   transform: translateY(0);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 /* Responsive Design - Tablet */
@@ -512,6 +510,10 @@ form .btn-primary:active {
   }
 
   .about .container {
+    grid-template-columns: 1fr;
+  }
+
+  .outdoor-kurs .container {
     grid-template-columns: 1fr;
   }
 
@@ -562,6 +564,7 @@ form .btn-primary:active {
 
   .about,
   .journey,
+  .outdoor-kurs,
   .qualifications,
   .courses,
   .approach,
@@ -570,6 +573,7 @@ form .btn-primary:active {
   }
 
   .about-content h2,
+  .outdoor-kurs h2,
   .journey-content h2,
   .qualifications h2,
   .courses h2,
@@ -579,6 +583,7 @@ form .btn-primary:active {
   }
 
   .about-content p,
+  .outdoor-kurs p,
   .journey-content p {
     font-size: 1rem;
   }
@@ -613,6 +618,7 @@ form .btn-primary:active {
   }
 
   .about-content h2,
+  .outdoor-kurs h2,
   .journey-content h2,
   .qualifications h2,
   .courses h2,
