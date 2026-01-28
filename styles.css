@@ -643,3 +643,14 @@ form .btn-primary:active {
     padding: 1.5rem;
   }
 }
+
+/* Footer */
+footer {
+  background-color: #fff;
+  color: #333;
+  text-align: center;
+}
+footer a {
+  color: #e91e63;
+  text-decoration: none;
+}
