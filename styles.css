@@ -241,6 +241,41 @@ img {
   line-height: 1.8;
 }
 
+/* Winterkurs Section */
+.winterkurs {
+  background-color: #fff;
+  padding: 6rem 20px;
+}
+
+.winterkurs .container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.winterkurs-content h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.winterkurs-description {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+.winterkurs-description p {
+  margin-bottom: 1.2rem;
+}
+
+.winterkurs-description strong {
+  color: #333;
+  font-weight: 600;
+}
+
 /* Outdoor course image sizing */
 .kurs-image img {
   width: 100%;
