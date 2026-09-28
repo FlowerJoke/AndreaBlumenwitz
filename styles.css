@@ -193,11 +193,15 @@ img {
   padding: 6rem 20px;
 }
 
-.outdoor-kurs .container {
+.outdoor-kurs .container,
+.sommerkurs .container,
+.winterkurs .container {
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: 4rem;
-  align-items: center;
+  grid-template-columns: minmax(220px, 360px) minmax(0, 1fr);
+  justify-content: center;
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: start;
+  max-width: 1100px;
 }
 
 .outdoor-kurs h2 {
@@ -220,13 +224,6 @@ img {
   padding: 6rem 20px;
 }
 
-.sommerkurs .container {
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: 4rem;
-  align-items: center;
-}
-
 .sommerkurs-content h2 {
   font-size: 2.5rem;
   color: #333;
@@ -245,13 +242,6 @@ img {
 .winterkurs {
   background-color: #fff;
   padding: 6rem 20px;
-}
-
-.winterkurs .container {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: 4rem;
-  align-items: center;
 }
 
 .winterkurs-content h2 {
@@ -279,10 +269,16 @@ img {
 /* Outdoor course image sizing */
 .kurs-image img {
   width: 100%;
-  max-width: 420px;
+  max-width: 360px;
   margin: 0 auto;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.outdoor-kurs .kurs-image,
+.sommerkurs .kurs-image,
+.winterkurs .kurs-image {
+  width: 100%;
 }
 
 /* Journey Section */
@@ -576,14 +572,6 @@ form .btn-primary:active {
     grid-template-columns: 1fr;
   }
 
-  .outdoor-kurs .container {
-    grid-template-columns: 1fr;
-  }
-
-  .sommerkurs .container {
-    grid-template-columns: 1fr;
-  }
-
   .journey .container {
     grid-template-columns: 1fr;
   }
@@ -629,10 +617,25 @@ form .btn-primary:active {
     font-size: 1rem;
   }
 
+  .outdoor-kurs .container,
+  .sommerkurs .container,
+  .winterkurs .container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .kurs-image,
+  .kurs-image img {
+    width: min(100%, 320px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .about,
   .journey,
   .outdoor-kurs,
   .sommerkurs,
+  .winterkurs,
   .qualifications,
   .courses,
   .approach,
@@ -654,8 +657,17 @@ form .btn-primary:active {
   .about-content p,
   .outdoor-kurs p,
   .sommerkurs-content p,
+  .winterkurs-description,
   .journey-content p {
     font-size: 1rem;
+  }
+
+  .winterkurs-content h2 {
+    font-size: 2rem;
+  }
+
+  .winterkurs-description {
+    line-height: 1.7;
   }
 
   .courses-grid {
@@ -669,6 +681,11 @@ form .btn-primary:active {
 
   .btn-primary {
     padding: 0.8rem 2rem;
+  }
+
+  form input,
+  form textarea {
+    box-sizing: border-box;
   }
 }
 
