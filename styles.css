@@ -1718,3 +1718,133 @@ details.more[open] > summary {
     gap: 0.8rem;
   }
 }
+
+/* Feedback round: header, hero on phone, retreat teaser, collapsibles */
+.nav-links {
+  align-items: center;
+}
+
+.nav-links li {
+  display: flex;
+  align-items: center;
+}
+
+.announce {
+  display: block;
+  padding: 0.5rem 20px;
+  background: var(--pink-dark);
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.announce:hover {
+  background: #8f1048;
+}
+
+.announce:focus-visible {
+  outline-color: #fff;
+}
+
+/* Retreat teaser on the homepage */
+.retreat {
+  background: linear-gradient(180deg, #fadce7 0%, #fff0f5 100%);
+}
+
+.retreat-teaser {
+  text-align: center;
+  max-width: 760px;
+}
+
+.retreat-teaser h2 {
+  margin-bottom: 1rem;
+}
+
+.section .teaser-price {
+  font-size: 1.3rem;
+  color: var(--text);
+  margin: 1.5rem 0 0.4rem;
+}
+
+.teaser-price span {
+  white-space: nowrap;
+}
+
+.teaser-price strong {
+  color: var(--pink-dark);
+  white-space: nowrap;
+}
+
+.section .teaser-sub {
+  font-size: 0.95rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.teaser-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn-large {
+  padding: 1.1rem 2.8rem;
+  font-size: 1.1rem;
+}
+
+/* Wave divider into the FAQ section */
+.divider-wave {
+  height: 60px;
+  margin-bottom: -1px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60' preserveAspectRatio='none'%3E%3Cpath d='M0 60V30C240 0 480 0 720 25s480 30 720 5v30z' fill='%23f9f9f9'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+}
+
+/* Collapsible blocks: centered buttons with breathing room */
+details.more > summary {
+  display: block;
+  width: fit-content;
+}
+
+details.more-center > summary {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+details.more-center {
+  margin: 2.5rem 0 0.5rem;
+}
+
+details.more-center[open] > summary {
+  margin-bottom: 2rem;
+}
+
+.more-center .testimonials-grid {
+  margin-top: 0;
+}
+
+/* Hero on phone: image first, smaller, buttons centered */
+@media (max-width: 992px) {
+  .hero-image {
+    order: -1;
+    max-width: 260px;
+    margin: 0 auto 2rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-image img {
+    border-radius: 24px 24px 80px 24px;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-buttons a {
+    flex: 1 1 220px;
+    max-width: 280px;
+    text-align: center;
+  }
+}
