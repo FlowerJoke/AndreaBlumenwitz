@@ -1525,3 +1525,196 @@ details.more[open] > summary {
 .past-courses .section-intro {
   margin-bottom: 1.5rem;
 }
+
+/* Retreat page */
+.nav .nav-simple {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: auto;
+  gap: 1.2rem;
+  padding-bottom: 0;
+}
+
+.nav .nav-simple a {
+  display: inline-block;
+  border-top: 0;
+  padding: 0.5rem 0;
+}
+
+.nav .nav-simple .nav-cta a.btn-primary {
+  padding: 0.5rem 1.2rem;
+}
+
+.nav .nav-simple a::after {
+  display: block;
+}
+
+.nav .nav-simple .nav-cta a::after {
+  display: none;
+}
+
+.retreat-hero {
+  background: linear-gradient(180deg, #fff3f7 0%, #fff 100%);
+  padding-top: 5rem;
+}
+
+.retreat-hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 1.2rem;
+  max-width: 18ch;
+}
+
+.section .retreat-lead {
+  font-size: 1.2rem;
+  max-width: 40rem;
+}
+
+.retreat-facts {
+  margin: 2rem 0;
+}
+
+.retreat-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.section h2.center,
+.center {
+  text-align: center;
+}
+
+.narrow {
+  max-width: 760px;
+}
+
+.placeholder {
+  background: repeating-linear-gradient(45deg, #fff8e1, #fff8e1 8px, #fff3c4 8px, #fff3c4 16px);
+  color: #7a5b00;
+  border: 1px dashed #d4a017;
+  border-radius: 6px;
+  padding: 0.1rem 0.5rem;
+  font-style: normal;
+}
+
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.program-card {
+  padding: 1.6rem;
+  background: var(--bg);
+  border-top: 4px solid var(--pink);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+}
+
+.program-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+}
+
+.section .program-card p {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.section .program-note {
+  margin-top: 2rem;
+}
+
+.schedule {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.schedule-day {
+  padding: 1.5rem;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.schedule-day h3 {
+  color: var(--pink-dark);
+  margin-bottom: 0.6rem;
+}
+
+.section .schedule-day p {
+  margin-bottom: 0;
+}
+
+.retreat h2 {
+  margin-bottom: 2.5rem;
+}
+
+.section .price-hint {
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.steps {
+  margin: 1.5rem 0;
+  padding-left: 1.4rem;
+  font-size: 1.1rem;
+  color: var(--text-soft);
+}
+
+.steps li + li {
+  margin-top: 0.6rem;
+}
+
+.section .fineprint {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.hotel-intro {
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.photo-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 4 / 3;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.cta-band h2 {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 992px) {
+  .program-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .program-grid,
+  .schedule,
+  .photo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav .nav-simple {
+    gap: 0.8rem;
+  }
+}
