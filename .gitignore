@@ -2,3 +2,8 @@
 /Flyer
 /TODO.md
 /NOTIZ_Offene_Punkte.md
+/status
+
+# Print/source files inside images/Flyer stay local; only the .webp web versions are published
+/images/Flyer/*/*
+!/images/Flyer/*/*.webp
