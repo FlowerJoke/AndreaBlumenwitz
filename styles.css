@@ -870,8 +870,8 @@ footer {
   }
 }
 
-/* Responsive Design - Tablet */
-@media (max-width: 992px) {
+/* Navigation collapses to hamburger */
+@media (max-width: 1100px) {
   .nav {
     padding: 0.5rem 20px;
     flex-wrap: wrap;
@@ -903,7 +903,10 @@ footer {
   .nav-links a::after {
     display: none;
   }
+}
 
+/* Responsive Design - Tablet */
+@media (max-width: 992px) {
   .hero {
     grid-template-columns: 1fr;
     text-align: center;
@@ -1052,6 +1055,274 @@ footer {
   .btn-secondary:hover,
   .course-card:hover,
   .qualification-item:hover {
+    transform: none;
+  }
+}
+
+/* ---------- Level-up: Typografie, Hero, Foto-Band, Auszeit-Wochenende ---------- */
+.eyebrow,
+.section .eyebrow {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--pink);
+  margin-bottom: 0.8rem;
+}
+
+.header {
+  backdrop-filter: saturate(1.4) blur(8px);
+  background-color: rgba(255, 255, 255, 0.92);
+}
+
+.nav-cta a.btn-primary {
+  padding: 0.5rem 1.2rem;
+  color: #fff;
+}
+
+.nav-links .nav-cta a::after {
+  display: none;
+}
+
+.nav-links .nav-cta a:hover {
+  color: #fff;
+}
+
+.hero {
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 8% -20% 8% 45%;
+  z-index: -1;
+  background: radial-gradient(closest-side, rgba(216, 27, 96, 0.12), transparent);
+}
+
+.hero-content h1 {
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  letter-spacing: -0.02em;
+}
+
+.hero-image img {
+  border-radius: 28px 28px 120px 28px;
+  box-shadow: 0 20px 50px rgba(173, 20, 87, 0.22);
+}
+
+.hero-facts {
+  list-style: none;
+  padding: 0;
+  margin-top: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem 2rem;
+}
+
+.hero-facts li {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0.9rem;
+  border-left: 3px solid var(--pink);
+  line-height: 1.3;
+  text-align: left;
+}
+
+.hero-facts strong {
+  color: var(--text);
+}
+
+.hero-facts span {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.section h2 {
+  letter-spacing: -0.01em;
+}
+
+/* Photo band */
+.photo-band {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  background: #2b1a22;
+  color: #fff;
+}
+
+.photo-band img {
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  max-height: 560px;
+  object-fit: cover;
+}
+
+.photo-band-text {
+  align-self: center;
+  padding: clamp(2rem, 6vw, 5rem);
+  max-width: 560px;
+}
+
+.photo-band-text .eyebrow,
+.section .photo-band-text .eyebrow {
+  color: #ff8fb8;
+}
+
+.photo-band-text h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.photo-band-text p {
+  color: #f0dfe6;
+  margin-bottom: 1.5rem;
+}
+
+/* Auszeit-Wochenende */
+.praevention {
+  background: linear-gradient(180deg, #fff3f7 0%, #fff 100%);
+}
+
+.praev-head {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 3rem;
+}
+
+.praev-head h2 {
+  margin-bottom: 1rem;
+}
+
+.section .praev-lead {
+  font-size: 1.15rem;
+}
+
+.praev-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.praev-card {
+  padding: 2rem 1.6rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+}
+
+.section .praev-card .praev-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--pink-dark);
+  margin-bottom: 0.3rem;
+}
+
+.section .praev-card .praev-price {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.praev-card ul {
+  padding-left: 1.2rem;
+  color: var(--text-soft);
+}
+
+.praev-card li + li {
+  margin-top: 0.4rem;
+}
+
+.praev-total {
+  background: var(--pink);
+  border-color: var(--pink);
+  box-shadow: 0 12px 30px rgba(216, 27, 96, 0.3);
+}
+
+.section .praev-total .praev-label,
+.section .praev-total .praev-price,
+.section .praev-total .praev-note {
+  color: #fff;
+}
+
+.section .praev-total .praev-note {
+  font-size: 1rem;
+}
+
+.section .praev-total .praev-badge {
+  display: inline-block;
+  margin: 0.5rem 0 0;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--pink-dark);
+  background: #fff;
+  border-radius: 12px;
+  line-height: 1.4;
+}
+
+.praev-foot {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+.praev-foot .btn-primary {
+  margin-top: 0.5rem;
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (max-width: 992px) {
+  .hero::before {
+    display: none;
+  }
+
+  .hero-facts {
+    justify-content: center;
+  }
+
+  .praev-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .photo-band {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-band img {
+    max-height: 380px;
+  }
+
+  .nav-cta a.btn-primary {
+    display: inline-block;
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
     transform: none;
   }
 }

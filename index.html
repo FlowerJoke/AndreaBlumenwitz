@@ -56,11 +56,11 @@
       <ul class="nav-links" id="nav-links">
         <li><a href="#about">Über mich</a></li>
         <li><a href="#winterkurs">Winterprogramm</a></li>
+        <li><a href="#praevention">Auszeit 2027</a></li>
         <li><a href="#journey">Mein Weg</a></li>
         <li><a href="#qualifications">Qualifikationen</a></li>
         <li><a href="#courses">Angebot</a></li>
-        <li><a href="#approach">Arbeitsweise</a></li>
-        <li><a href="#contact">Kontakt</a></li>
+        <li class="nav-cta"><a href="#contact" class="btn-primary">Probestunde</a></li>
       </ul>
     </nav>
   </header>
@@ -69,6 +69,7 @@
     <!-- Hero Section -->
     <section class="hero" id="hero">
       <div class="hero-content">
+        <p class="eyebrow">Outdoor-Training · Westpark München</p>
         <h1>Andrea Blumenwitz</h1>
         <p class="hero-subtitle">Fitness-Trainerin · Reha Übungsleiterin · Pilatestrainerin</p>
         <p class="hero-claim">
@@ -82,6 +83,11 @@
           <a href="#winterkurs" class="btn-primary">Zum Winterprogramm</a>
           <a href="#about" class="btn-secondary">Mehr über Andrea</a>
         </div>
+        <ul class="hero-facts" aria-label="Auf einen Blick">
+          <li><strong>Mo &amp; Do</strong><span>19:15 Uhr</span></li>
+          <li><strong>60 min</strong><span>pro Einheit</span></li>
+          <li><strong>Kleine Gruppe</strong><span>für jedes Level</span></li>
+        </ul>
       </div>
       <div class="hero-image">
         <img src="images/hero.webp" width="800" height="1496" fetchpriority="high"
@@ -108,6 +114,19 @@
           </div>
         </div>
         <p class="intro-cta"><a href="#contact" class="btn-primary">Probestunde anfragen</a></p>
+      </div>
+    </section>
+
+
+    <!-- Foto-Band -->
+    <section class="photo-band" aria-label="Training im Westpark">
+      <img src="images/westpark-abend.webp" width="640" height="640" loading="lazy"
+        alt="Frauengruppe trainiert bei Sonnenuntergang auf Matten im Westpark" />
+      <div class="photo-band-text">
+        <p class="eyebrow">Frische Luft. Kleine Gruppe.</p>
+        <h2>Training unter freiem Himmel</h2>
+        <p>Bei Dämmerung auf der Wiese im Westpark: Kräftigung, Pilates und Balance, draußen statt im Studio.</p>
+        <a href="#winterkurs" class="btn-primary">Zum Winterprogramm</a>
       </div>
     </section>
 
@@ -200,6 +219,53 @@
             Vertrau auf deine Stärke und bleib durch den Winter fit und motiviert.
             Gemeinsam machen wir das! 
           </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Präventionsprogramm / Auszeit-Wochenende -->
+    <section id="praevention" class="section praevention">
+      <div class="container">
+        <header class="praev-head">
+          <p class="eyebrow">Neu 2027 · Nur für Andreas Gruppe</p>
+          <h2>Gemeinsam Auszeit nehmen</h2>
+          <p class="praev-lead">
+            Ein Wochenende voller Bewegung, Entspannung und guter Gespräche: Wir reisen als Frauen-Gruppe
+            (ca. 40-65 Jahre) ins 4-Sterne-Hotel Alte Post in Fieberbrunn und tanken gemeinsam Kraft.
+          </p>
+        </header>
+
+        <div class="praev-grid">
+          <div class="praev-card">
+            <p class="praev-label">Der Kurs</p>
+            <p class="praev-price">75 €</p>
+            <ul>
+              <li>12 Std. Prävention &amp; Bewegung</li>
+              <li>Outdoor: Natur &amp; Wandern</li>
+              <li>Indoor: Pilates, Faszien, Mobilität, Gleichgewicht &amp; Tiefen-Stretch</li>
+            </ul>
+          </div>
+          <div class="praev-card">
+            <p class="praev-label">Die Unterkunft</p>
+            <p class="praev-price">180 €</p>
+            <ul>
+              <li>2 Nächte im 4-Sterne-Hotel</li>
+              <li>Spa- &amp; Wellnessbereich inklusive</li>
+              <li>Halbpension</li>
+            </ul>
+          </div>
+          <div class="praev-card praev-total">
+            <p class="praev-label">Gesamt</p>
+            <p class="praev-price">255 €</p>
+            <p class="praev-note">Kurs und Hotel für das ganze Wochenende (Fr bis So).</p>
+            <p class="praev-badge">Hotelrabatt exklusiv für Andrea Blumenwitz</p>
+          </div>
+        </div>
+
+        <div class="praev-foot">
+          <p><strong>Termin:</strong> wird bekannt gegeben &middot; <strong>Ort:</strong> Hotel Alte Post, Fieberbrunn</p>
+          <p>Die Plätze in unserer kleinen, feinen Runde sind limitiert.</p>
+          <a class="btn-primary" href="mailto:andrea@blumenwitz.vip?subject=Auszeit-Wochenende%202027">Interesse anmelden</a>
         </div>
       </div>
     </section>
@@ -554,6 +620,20 @@
       document.addEventListener("keydown", function (e) {
         if (e.key === "Escape") setOpen(false);
       });
+    })();
+
+    // Sanftes Einblenden beim Scrollen
+    (function () {
+      if (!("IntersectionObserver" in window) ||
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      var items = document.querySelectorAll(
+        ".intro-card, .option-card, .praev-card, .course-card, .testimonial, .past-card, .qualification-item");
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) { en.target.classList.add("is-visible"); io.unobserve(en.target); }
+        });
+      }, { threshold: 0.12 });
+      items.forEach(function (el) { el.classList.add("reveal"); io.observe(el); });
     })();
 
     // Contact form: send without leaving the page
