@@ -540,6 +540,11 @@
     </div>
   </footer>
 
+  <div class="mobile-bar" aria-label="Schnellkontakt">
+    <a class="btn-secondary" href="https://wa.me/491788579351" target="_blank" rel="noopener">WhatsApp</a>
+    <a class="btn-primary" href="#contact">Probestunde</a>
+  </div>
+
   <script>
     // Mobile navigation
     (function () {
@@ -606,6 +611,18 @@
             button.disabled = false;
           });
       });
+    })();
+  </script>
+
+  <script>
+    // Mobile contact bar: hide while the contact section is on screen
+    (function () {
+      var bar = document.querySelector(".mobile-bar");
+      var target = document.getElementById("contact");
+      if (!bar || !target || !("IntersectionObserver" in window)) return;
+      new IntersectionObserver(function (e) {
+        bar.classList.toggle("is-hidden", e[0].isIntersecting);
+      }).observe(target);
     })();
   </script>
 </body>

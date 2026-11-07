@@ -404,3 +404,18 @@ footer a:hover { color: var(--pink-soft); text-decoration: underline; }
   .reveal.is-visible { opacity: 1; transform: none; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn-primary, .btn-secondary { transition: none; } }
+
+/* ---------- Mobile contact bar ---------- */
+.mobile-bar { display: none; }
+@media (max-width: 760px) {
+  body { padding-bottom: 4.8rem; }
+  .mobile-bar {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 90; display: flex; gap: .6rem;
+    padding: .6rem .8rem calc(.6rem + env(safe-area-inset-bottom));
+    background: rgba(255, 255, 255, .95); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+    border-top: 1px solid var(--line); box-shadow: 0 -6px 20px rgba(31, 31, 36, .08);
+    transition: transform .25s ease;
+  }
+  .mobile-bar a { flex: 1; min-height: 2.9rem; padding: .6rem 1rem; box-shadow: none; }
+  .mobile-bar.is-hidden { transform: translateY(110%); }
+}
