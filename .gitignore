@@ -7,3 +7,6 @@
 # Print/source files inside images/Flyer stay local; only the .webp web versions are published
 /images/Flyer/*/*
 !/images/Flyer/*/*.webp
+
+# Local backups of earlier site versions (not published)
+/backup
