@@ -22,10 +22,6 @@
 </head>
 
 <body>
-  <!--
-    PLATZHALTER: Alles mit der Klasse "placeholder" ist noch offen (Termin, Preise, Programmablauf, Hotelfotos, Anreise).
-    Vor dem Livegang auf main ersetzen oder entfernen. Offene Fragen: status/questions.md
-  -->
   <a href="#main" class="skip-link">Zum Inhalt springen</a>
 
   <header class="header">
@@ -51,8 +47,8 @@
         <ul class="facts" aria-label="Auf einen Blick">
           <li><strong>Hotel Alte Post</strong><span>Fieberbrunn, 4 Sterne</span></li>
           <li><strong>Freitag bis Sonntag</strong><span>2 Nächte</span></li>
-          <li><strong class="placeholder">[Termin folgt]</strong><span>Juni 2027</span></li>
-          <li><strong class="placeholder">[Preis folgt]</strong><span>Kurs und Hotel</span></li>
+          <li><strong>Juni 2027</strong><span>Termin folgt</span></li>
+          <li><strong>555 €</strong><span>im DZ, inkl. Halbpension</span></li>
         </ul>
         <div class="btn-row">
           <a href="#anmeldung" class="btn-primary btn-large">Platz anfragen</a>
@@ -94,31 +90,8 @@
       </div>
     </section>
 
-    <!-- Ablauf (Platzhalter) -->
-    <section class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>Der Ablauf</h2>
-        </div>
-        <div class="schedule">
-          <div class="schedule-day">
-            <h3>Freitag</h3>
-            <p class="placeholder">[Anreise und Programm folgen]</p>
-          </div>
-          <div class="schedule-day">
-            <h3>Samstag</h3>
-            <p class="placeholder">[Programm folgt]</p>
-          </div>
-          <div class="schedule-day">
-            <h3>Sonntag</h3>
-            <p class="placeholder">[Programm und Abreise folgen]</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Preise (Platzhalter) -->
-    <div class="wave wave--white-pink" aria-hidden="true"></div>
+    <!-- Preise -->
+    <div class="wave wave--alt-pink" aria-hidden="true"></div>
     <section id="preise" class="section retreat">
       <div class="container">
         <div class="section-head">
@@ -127,7 +100,7 @@
         <div class="price-grid">
           <div class="price-card">
             <p class="price-label">Der Kurs</p>
-            <p class="price-value"><span class="placeholder">[Preis folgt]</span></p>
+            <p class="price-value">375 €</p>
             <ul>
               <li>12 Std. Prävention &amp; Bewegung</li>
               <li>Outdoor: Natur &amp; Wandern</li>
@@ -136,7 +109,7 @@
           </div>
           <div class="price-card">
             <p class="price-label">Die Unterkunft</p>
-            <p class="price-value"><span class="placeholder">[Preis folgt]</span></p>
+            <p class="price-value">180 €<small> im Doppelzimmer</small></p>
             <ul>
               <li>2 Nächte im 4-Sterne-Hotel</li>
               <li>Spa- &amp; Wellnessbereich inklusive</li>
@@ -145,12 +118,11 @@
           </div>
           <div class="price-card is-total">
             <p class="price-label">Gesamt</p>
-            <p class="price-value"><span class="placeholder">[Preis folgt]</span></p>
-            <p class="price-note">Kurs und Hotel für das ganze Wochenende (Fr bis So).</p>
-            <p class="price-badge">Hotelrabatt exklusiv für meine Gruppe</p>
+            <p class="price-value">555 €</p>
+            <p class="price-note">Im Doppelzimmer, inklusive Halbpension (Fr bis So).</p>
+            <p class="price-badge">Krankenkasse: bis zu 300 € Zuschuss möglich (je nach Kasse)</p>
           </div>
         </div>
-        <p class="center price-note" style="margin-top:1.6rem">Die Hotelkonditionen gelten nur für Teilnehmerinnen meines Retreats.</p>
       </div>
     </section>
     <div class="wave wave--pink-white" aria-hidden="true"></div>
@@ -163,7 +135,7 @@
         </div>
         <p>
           Die Kurse im Retreat sind <strong>Präventionskurse nach § 20 SGB V (ZPP)</strong>. Die gesetzlichen
-          Krankenkassen erstatten in der Regel einen Großteil der Kosten. Wie viel genau, hängt von deiner Kasse ab.
+          Krankenkassen bezuschussen sie in der Regel mit bis zu 300 €. Wie viel genau, hängt von deiner Kasse ab.
         </p>
         <ol class="steps">
           <li><strong>Anfragen:</strong> Schreib mir und nenne mir deine Krankenkasse.</li>
@@ -177,24 +149,8 @@
       </div>
     </section>
 
-    <!-- Hotel -->
-    <section class="section section-alt">
-      <div class="container">
-        <div class="section-head">
-          <h2>Dein Hotel: Alte Post in Fieberbrunn</h2>
-          <p>4-Sterne-Hotel mit Spa- und Wellnessbereich. Im Retreat-Preis sind zwei Nächte mit Halbpension enthalten.</p>
-        </div>
-        <div class="photo-grid">
-          <div class="photo-placeholder placeholder">[Foto Hotel folgt]</div>
-          <div class="photo-placeholder placeholder">[Foto Spa folgt]</div>
-          <div class="photo-placeholder placeholder">[Foto Wandern folgt]</div>
-        </div>
-        <p class="center"><strong>Anreise:</strong> <span class="placeholder">[folgt]</span></p>
-      </div>
-    </section>
-
     <!-- FAQ -->
-    <section class="section">
+    <section class="section section-alt">
       <div class="container">
         <div class="section-head">
           <h2>Häufige Fragen</h2>
@@ -212,17 +168,13 @@
             <summary>Wie viele Plätze gibt es?</summary>
             <p>Die Plätze in meiner kleinen Runde sind limitiert.</p>
           </details>
-          <details>
-            <summary>Was kostet das Retreat?</summary>
-            <p><span class="placeholder">[Preis folgt]</span> Ein Großteil davon kann von der gesetzlichen Krankenkasse erstattet werden.</p>
-          </details>
         </div>
       </div>
     </section>
 
     <!-- Anmeldung -->
-    <div class="wave wave--white-alt" aria-hidden="true"></div>
-    <section id="anmeldung" class="section section-alt">
+    <div class="wave wave--alt-pink" aria-hidden="true"></div>
+    <section id="anmeldung" class="section retreat">
       <div class="narrow center">
         <h2>Interesse am Retreat?</h2>
         <p class="lead">

@@ -303,6 +303,17 @@
               </blockquote>
               <figcaption>61 Jahre, Berg-, Radl- und Schneeliebhaberin</figcaption>
             </figure>
+            <figure class="testimonial">
+              <blockquote>
+                <p>
+                  Andrea's positive Art zu motivieren, die abwechslungsreichen &amp; fordernden Übungen, der Sport im
+                  Freien (&amp; ganz in der Nähe) und die angenehme Frauenrunde spornen mich jede Woche an, dranzubleiben
+                  &amp; keine Stunde zu verpassen. Andrea leitet das Training kompetent &amp; passt Übungen bei Bedarf
+                  individuell an. Ich gehe jedes Mal mit einem richtig guten Gefühl nach Hause! Danke!
+                </p>
+              </blockquote>
+              <figcaption>Kursteilnehmerin</figcaption>
+            </figure>
           </div>
         </details>
       </div>
@@ -338,12 +349,10 @@
           </div>
         </div>
 
-        <ul class="stats" aria-label="Andrea in Zahlen">
-          <li><strong>4 Söhne</strong><span>Organisation, Gelassenheit und Humor im Alltag</span></li>
-          <li><strong>100 km</strong><span>Megamarsch München-Garmisch in 24 Stunden</span></li>
-          <li><strong>60+ Länder</strong><span>auf 6 Kontinenten bereist</span></li>
-          <li><strong>Dipl.-Ing.</strong><span>Bauingenieurwesen, mein erster Beruf</span></li>
-        </ul>
+        <p class="quiet-facts">
+          Vierfache Mutter <span aria-hidden="true">·</span> Dipl.-Bauingenieurin <span aria-hidden="true">·</span>
+          100 km in 24 Stunden <span aria-hidden="true">·</span> über 60 Länder bereist
+        </p>
 
         <div class="split reverse" id="journey">
           <div>
@@ -570,7 +579,7 @@
       if (!("IntersectionObserver" in window) ||
         window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
       var items = document.querySelectorAll(
-        ".card, .option-card, .testimonial, .past-card, .stats li, .pill-list li");
+        ".card, .option-card, .testimonial, .past-card, .pill-list li");
       var io = new IntersectionObserver(function (entries) {
         entries.forEach(function (en) {
           if (en.isIntersecting) { en.target.classList.add("is-visible"); io.unobserve(en.target); }
