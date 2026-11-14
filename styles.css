@@ -417,3 +417,54 @@ footer a:hover { color: var(--pink-soft); text-decoration: underline; }
 
 .price-old { font-size: 1.1rem; font-weight: 600; color: var(--muted); margin-right: .2rem; }
 .price-footnote { margin-top: 1.6rem; max-width: 40rem; margin-inline: auto; }
+
+/* ---------- Sticker + ticker ---------- */
+.sticker {
+  position: absolute; right: -10px; bottom: 14%; z-index: 2; padding: .55rem .9rem; text-align: center;
+  background: #fff; color: var(--pink-dark); border: 2px solid var(--pink); border-radius: 14px;
+  font-weight: 800; font-size: .9rem; line-height: 1.2; transform: rotate(6deg);
+  box-shadow: 0 8px 20px rgba(31, 31, 36, .15);
+}
+.ticker { overflow: hidden; background: var(--pink-tint); border-block: 1px solid var(--pink-soft); }
+.ticker-track {
+  display: flex; width: max-content; padding: .7rem 0;
+  font-size: .8rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--pink-dark);
+  white-space: nowrap; animation: ticker 40s linear infinite;
+}
+.ticker-track span { padding: 0 1.4rem; position: relative; }
+.ticker-track span::after { content: ""; position: absolute; right: -2px; top: 50%; width: 5px; height: 5px; margin-top: -2.5px; border-radius: 50%; background: var(--pink); }
+@keyframes ticker { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track { animation: none; width: auto; flex-wrap: wrap; justify-content: center; row-gap: .3rem; padding: .7rem 1rem; }
+  .ticker-track .dup { display: none; }
+}
+@media (max-width: 860px) { .sticker { right: -6px; bottom: 10%; font-size: .78rem; padding: .4rem .7rem; } }
+
+/* ---------- Mobile polish ---------- */
+@media (max-width: 600px) {
+  .hide-sm { display: none; }
+  .announce { font-size: .88rem; padding: .5rem .8rem; }
+  .card { padding: 1.2rem 1.2rem; }
+  .card-icon { width: 38px; height: 38px; margin-bottom: .6rem; font-size: 1rem; }
+  .rituals { padding: 1.2rem; }
+  .section-head { margin-bottom: 1.8rem; }
+  .btn-row .btn-large { width: 100%; }
+  .teaser-actions, .retreat-teaser .btn-row { flex-direction: column; align-items: stretch; }
+  .facts li { min-width: 0; flex: 1 1 40%; }
+  .contact-links a { padding: 1rem 1.1rem; }
+  form.contact-form { padding: 1.3rem; }
+  .price-card, .schedule-day { padding: 1.4rem; }
+}
+/* Testimonials: swipe on phones instead of a long stack */
+@media (max-width: 760px) {
+  .testimonials-grid {
+    display: flex; overflow-x: auto; gap: 1rem; padding: .3rem 1.25rem 1.2rem; margin-inline: -1.25rem;
+    scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none;
+  }
+  .testimonials-grid::-webkit-scrollbar { display: none; }
+  .testimonials-grid .testimonial { flex: 0 0 84%; scroll-snap-align: center; }
+  .testimonials-grid + .more, .more .testimonials-grid { margin-top: 0; }
+  .swipe-hint { display: block; }
+}
+.swipe-hint { display: none; text-align: center; margin: 0 0 .6rem; color: var(--muted); font-size: .88rem; }
+@media (max-width: 760px) { .swipe-hint { display: block; } }
