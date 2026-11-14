@@ -414,3 +414,6 @@ footer a:hover { color: var(--pink-soft); text-decoration: underline; }
 
 .price-value small { display: block; margin-top: .35rem; font-size: .95rem; font-weight: 600; color: var(--muted); }
 
+
+.price-old { font-size: 1.1rem; font-weight: 600; color: var(--muted); margin-right: .2rem; }
+.price-footnote { margin-top: 1.6rem; max-width: 40rem; margin-inline: auto; }
