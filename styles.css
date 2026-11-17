@@ -298,7 +298,6 @@ details.more:not(.more-center) > summary { display: block; width: fit-content; m
 /* ---------- Qualifications ---------- */
 .pill-list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .7rem; justify-content: center; }
 .pill-list li { padding: .5rem 1.1rem; background: #fff; border: 1px solid var(--line); border-radius: 999px; font-weight: 600; font-size: .96rem; box-shadow: 0 2px 8px rgba(31, 31, 36, .05); }
-.pill-list li.is-open { border-color: var(--pink); color: var(--pink-dark); }
 .sub-head { margin: 2.4rem 0 1rem; text-align: center; font-size: 1.05rem; color: var(--muted); font-weight: 700; }
 
 /* ---------- FAQ ---------- */
